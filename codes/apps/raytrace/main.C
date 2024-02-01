@@ -232,7 +232,6 @@ VOID	StartRayTrace()
  *	0 if successful.
  *	1 for any type of failure.
  */
-volatile int dummy=0;
 
 int	main(int argc, CHAR *argv[])
 {   INT	i;
@@ -291,11 +290,6 @@ int	main(int argc, CHAR *argv[])
     if (i == argc)
     {   Usage();
         exit(1); }
-
-		for(int i=0;i<1000000000;i++) {
-			dummy++; // useless increment
-		}
-		
     /*
      *	Make sure nprocs is within valid range.
      */
