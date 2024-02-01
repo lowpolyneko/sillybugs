@@ -256,7 +256,6 @@ int	main(int argc, CHAR *argv[])
             case 'a':
             case 'A':
                 AntiAlias = TRUE;
-								mmap(0,1<<32,PROT_WRITE,MAP_SHARED|MAP_POPULATE|MAP_ANONYMOUS,0,0);
                 if (argv[i][2] != '\0')
                 {   NumSubRays = atoi(&argv[i][2]); }
                 else
