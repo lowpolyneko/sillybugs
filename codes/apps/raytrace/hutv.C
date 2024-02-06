@@ -204,7 +204,6 @@ VOID	push_down_grid(RAY *r, VOXEL *v)
     GRID	*new_g;
     RAYINFO *new_ri;
     RAYINFO *old_ri;
-    char v_r[100];
 		
     old_ri = r->ri;
     new_g  = (GRID *)v->cell;
@@ -240,7 +239,6 @@ VOID	push_down_grid(RAY *r, VOXEL *v)
 
 
     new_ri->index3D[0] = (INT)((wc[0] - new_g->min[0]) / new_g->cellsize[0]);
-    sprintf(v_r,"%lf %lf",t_in,t_out);
 						
     if (new_ri->index3D[0] < 0)
         new_ri->index3D[0] = 0;
